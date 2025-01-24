@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image'
+
 interface SiteCardProps {
   site: {
     title: string;
@@ -20,10 +22,11 @@ export function SiteCard({ site }: SiteCardProps) {
         transition-all duration-300"
     >
       <div className="flex items-center gap-2 mb-2">
-        <img
+        <Image
           src={`https://www.google.com/s2/favicons?domain=${new URL(site.url).hostname}&sz=32`}
           alt=""
-          className="w-4 h-4"
+          width={16}
+          height={16}
           onError={(e) => {
             (e.target as HTMLImageElement).src = '/default-favicon.png';
           }}

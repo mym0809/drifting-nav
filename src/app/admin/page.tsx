@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { getAllTags, Site } from '@/data/sites';
 import { storageService } from '@/services/storage';
 import AddSiteModal from '@/components/AddSiteModal';
-import { Pencil, Trash2, Plus, ArrowLeft, Lock, ExternalLink, GripVertical, Edit2, Check, X } from 'lucide-react';
+import { Pencil, Trash2, Plus, ArrowLeft, Lock, GripVertical, Edit2, Check, X } from 'lucide-react';
 import Link from 'next/link';
 import { config } from '@/config';
 
