@@ -1,0 +1,79 @@
+{
+  "site": {
+    "title": "Drifting Nav",
+    "description": "一个带后台管理的导航网站",
+    "favicon": "/favicon.png",
+    "logo": "/logo.png",
+    "manifest": "/manifest.json",
+    "themeColorLight": "#ffffff",
+    "themeColorDark": "#1a1a1a",
+    "sidebar": {
+      "showLogo": true,
+      "showTitle": true,
+      "showDescription": true
+    },
+    "banner": {
+      "show": true,
+      "image": "/banner.jpg",
+      "height": "200px"
+    }
+  },
+  
+  "admin": {
+    "path": "/admin",
+    "password": "123456"
+  },
+  
+  "storage": {
+    "key": "drifting-nav-sites"
+  },
+  
+  "webInfo": {
+    "favicon": {
+      "providers": [
+        "https://${domain}/favicon.icon",
+        "https://www.google.com/s2/favicons?domain=${domain}&sz=32"
+      ]
+    },
+    "metadata": {
+      "selectors": {
+        "title": [
+          "title",
+          "meta[property=\"og:title\"]",
+          "meta[name=\"twitter:title\"]"
+        ],
+        "description": [
+          "meta[name=\"description\"]",
+          "meta[property=\"og:description\"]",
+          "meta[name=\"twitter:description\"]"
+        ]
+      },
+      "fallback": {
+        "title": "未知网站",
+        "description": "暂无描述"
+      }
+    }
+  },
+  
+  "searchEngines": [
+    {
+      "name": "本地",
+      "searchUrl": "local",
+      "icon": "/favicon.png"
+    },
+    {
+      "name": "百度",
+      "searchUrl": "https://www.baidu.com/s?wd={query}",
+      "icon": "https://www.baidu.com/favicon.ico"
+    },
+    {
+      "name": "Google",
+      "searchUrl": "https://www.google.com/search?q={query}"
+    },
+    {
+      "name": "Bing",
+      "searchUrl": "https://www.bing.com/search?q={query}",
+      "icon": "https://www.bing.com/favicon.ico"
+    }
+  ]
+} 
